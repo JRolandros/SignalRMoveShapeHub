@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.SignalR;
 using Newtonsoft.Json;
+using Microsoft.AspNet.SignalR.Hubs;
 
 namespace SignalRMoveShape.features
 {
+     [HubName("moveShapeHub")]
     public class MoveShapeHub : Hub
     {
         public void UpdateModel(ShapeModel clientModel)
